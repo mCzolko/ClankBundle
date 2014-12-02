@@ -94,7 +94,7 @@ class TopicHandler implements TopicHandlerInterface
 
         foreach($this->getTopicServices() as $topicService)
         {
-            if ($topicService['name'] === $serviceMatch)
+            if ($topicService['name'] == $serviceMatch)
                 return $this->getContainer()->get($topicService['service']);
         }
         return false;
