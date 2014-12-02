@@ -73,7 +73,7 @@ class RPCHandler implements RPCHandlerInterface
     {
         foreach($this->rpcServices as $service)
         {
-            if ($service['name'] === $name)
+            if ($service['name'] == $name)
                 return $this->getContainer()->get($service['service']);
         }
         return false;
